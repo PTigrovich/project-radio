@@ -8,7 +8,9 @@ function Main() {
         navigate('/home'); 
     };
 
-    return <div onClick={handleClick} className={styles.background}></div>;
+    return (
+		<div onClick={handleClick} className={styles.background}></div>
+	 );
 }
 
 export default Main;

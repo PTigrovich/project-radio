@@ -16,15 +16,20 @@ function Home() {
 
 	 const handleClickPolar = () => {
          navigate('/polar');
+    };
+	 
+	 const handleClickBack = () => {
+         navigate('/');
      };
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
-                <Button className={styles.margin} onClick={handleClickArctic} />
-                <Button className={styles.margin} onClick={handleClickPilot} />
+                <Button className={styles.button} onClick={handleClickArctic} />
+                <Button className={styles.button} onClick={handleClickPilot} />
                 <Button onClick={handleClickPolar} />
             </div>
+            <BackButton className={styles.backButton} onClick={handleClickBack} />
         </div>
     );
 }

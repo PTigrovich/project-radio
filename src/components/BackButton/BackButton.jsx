@@ -1,8 +1,12 @@
 import styles from './BackButton.module.scss';
 
-function BackButton() {
-	return (
-		<button className={styles.base}></button>
+function BackButton({ className = '', onClick }) {
+    return (
+		<button 
+	 		className={`${styles.base} ${className}`} 
+	 		onClick={onClick}
+	 	>
+	 	</button>
 	 );
 }
 

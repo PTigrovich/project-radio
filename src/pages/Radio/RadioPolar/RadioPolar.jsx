@@ -1,0 +1,38 @@
+import styles from './RadioPolar.module.scss';
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../../components/Button/Button';
+
+function Radio() {
+    const navigate = useNavigate();
+
+    const handleClickBack = () => {
+        navigate('/polar');
+    };
+
+    const audioRef = useRef(null);
+
+    const handlePlay = () => {
+        audioRef.current = new Audio('/assets/audio-pilot.mp3');
+        audioRef.current.play().catch(error => {
+            console.error('Ошибка воспроизведения:', error);
+            audioRef.current.muted = true;
+            audioRef.current.play();
+        });
+    };
+
+    return (
+        <div className={styles.wrapper}>
+            <div className={styles.content}>
+                <Button
+                    className={styles.button}
+                    onClick={handlePlay}
+                />
+
+                <Button className={styles.button} onClick={handleClickBack} />
+            </div>
+        </div>
+    );
+}
+
+export default Radio;

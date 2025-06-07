@@ -1,7 +1,7 @@
 .base {
 	height: 115px;
 	width: 245px;
-	background-color: #857e7e;
+	// background-color: #857e7e;
 	border: none;
 	border-radius: 10px;
 	margin-top: 590px;
@@ -11,6 +11,6 @@
 	transition: background-color 0.3s ease; // Плавное изменение яркости
 
 	&:active {
-		background-color: rgba(4, 4, 4, 0.25); /* Затемнение при нажатии */
+		background-color: rgba(4, 4, 4, 0.25); // Затемнение при нажатии 
 	 }
 }

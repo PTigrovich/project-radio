@@ -14,7 +14,7 @@ function RadioPilot() {
 	 
 		 const handlePlay = () => {
 				  
-				  audioRef.current = new Audio('/assets/audio-pilot.mp3');
+				  audioRef.current = new Audio('/audio/audio-pilot.mp3');
 				  audioRef.current.play().catch(error => {
 						console.error('Ошибка воспроизведения:', error);
 						audioRef.current.muted = true;

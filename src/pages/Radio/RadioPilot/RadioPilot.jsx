@@ -5,22 +5,38 @@ import Button from '../../../components/Button/Button';
 
 function RadioPilot() {
     const navigate = useNavigate();
+    const audioRef = useRef(null);
 
     const handleClickBack = () => {
+        // Останавливаем аудио при переходе назад
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
+        }
         navigate('/pilot');
     };
 
-    const audioRef = useRef(null);
-	 
-		 const handlePlay = () => {
-				  
-				  audioRef.current = new Audio('/audio/audio-pilot.mp3');
-				  audioRef.current.play().catch(error => {
-						console.error('Ошибка воспроизведения:', error);
-						audioRef.current.muted = true;
-						audioRef.current.play();
-				  });
-			 };
+    const handlePlay = () => {
+        // Если аудио уже играет, останавливаем и начинаем сначала
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
+        } else {
+            // Создаем новый экземпляр Audio
+            audioRef.current = new Audio('/audio/audio-pilot.mp3');
+        }
+
+        // Пробуем воспроизвести
+        audioRef.current.play()
+            .catch(error => {
+                console.error('Ошибка воспроизведения:', error);
+                // Пробуем с отключенным звуком
+                if (audioRef.current) {
+                    audioRef.current.muted = true;
+                    audioRef.current.play()
+                        .catch(e => console.error('Не удалось воспроизвести даже с отключенным звуком:', e));
+                }
+            });    };
 
     return (
         <div className={styles.wrapper}>
@@ -28,12 +44,16 @@ function RadioPilot() {
                 <Button
                     className={styles.button}
                     onClick={handlePlay}
+                    
                 />
 
-                <Button className={styles.button} onClick={handleClickBack} />
+                <Button 
+                    className={styles.button}
+                    onClick={handleClickBack}
+                    
+                />
             </div>
         </div>
     );
 }
-
 export default RadioPilot;

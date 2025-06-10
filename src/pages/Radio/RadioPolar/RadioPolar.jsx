@@ -23,7 +23,7 @@ function RadioPolar() {
             audioRef.current.currentTime = 0;
         } else {
             // Создаем новый экземпляр Audio
-            audioRef.current = new Audio('/audio/audio-pilot.mp3');
+            audioRef.current = new Audio('/audio/audio-polar.mp3');
         }
 
         // Пробуем воспроизвести

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
 import Main from './pages/Main/Main';
 import Home from './pages/Home/Home';
+import Home2 from './pages/Home2/Home2';
 import Arctic from './pages/Arctic/Arctic';
 import Pilot from './pages/Pilot/Pilot';
 import Polar from './pages/Polar/Polar';
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/home',
-        element: <Home />,
+        element: <Home2 />,
     },
     {
         path: '/arctic',

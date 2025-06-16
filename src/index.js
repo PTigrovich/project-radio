@@ -5,9 +5,7 @@ import './index.scss';
 import Main from './pages/Main/Main';
 
 import Home from './pages/Home/Home';
-import Arctic from './pages/Arctic/Arctic';
-import Pilot from './pages/Pilot/Pilot';
-import Polar from './pages/Polar/Polar';
+
 import RadioArctic from './pages/Radio/RadioArctic/RadioArctic';
 import ConnectArctic from './pages/Connect/ConnectArctic/ConnectArctic';
 import RadioPilot from './pages/Radio/RadioPilot/RadioPilot';

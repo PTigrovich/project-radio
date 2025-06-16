@@ -1,11 +1,9 @@
-
-
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	width: 100vw;
-	background-image: url('/assets/home-background.jpg');
+	background-image: url('/assets/home-background2.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -15,14 +13,15 @@
  .content {
 	width: 100%;
 	height: 145px;
-	margin-top: 793px;
-	padding-left: 348px;
+	margin-top: 753px;
+	padding-left: 567px;
 	// opacity: 0.5;
    // background: #ac5757;
  }
 
  .button {
-	margin-right: 141px;
+	width: 358px;
+	margin-right: 66px;
  }
 
  .backButton{

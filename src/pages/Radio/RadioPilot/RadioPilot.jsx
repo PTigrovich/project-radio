@@ -13,7 +13,7 @@ function RadioPilot() {
             audioRef.current.pause();
             audioRef.current.currentTime = 0;
         }
-        navigate('/pilot');
+        navigate('/radio_menu');
     };
 
     const handlePlay = () => {

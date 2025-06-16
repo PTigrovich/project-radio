@@ -13,7 +13,7 @@ function RadioArctic() {
             audioRef.current.pause();
             audioRef.current.currentTime = 0;
         }
-        navigate('/arctic');
+        navigate('/radio_menu');
     };
 
     const handlePlay = () => {

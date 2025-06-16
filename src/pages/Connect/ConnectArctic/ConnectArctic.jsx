@@ -6,7 +6,7 @@ function Connect() {
    const navigate = useNavigate();
 
    const handleClickBack = () => {
-       navigate('/arctic');
+       navigate('/connect_menu');
    };
 
     return (

@@ -4,30 +4,25 @@ import Button from '../../components/Button/Button';
 import BackButton from '../../components/BackButton/BackButton';
 
 function Home() {
-	const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    const handleClickArctic = () => {
-        navigate('/arctic');
+    const handleClickRadio = () => {
+        navigate('/radio_menu');
     };
 
-	 const handleClickPilot = () => {
-         navigate('/pilot');
+    const handleClickConnect = () => {
+        navigate('/connect_menu');
     };
 
-	 const handleClickPolar = () => {
-         navigate('/polar');
+    const handleClickBack = () => {
+        navigate('/');
     };
-	 
-	 const handleClickBack = () => {
-         navigate('/');
-     };
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
-                <Button className={styles.button} onClick={handleClickArctic} />
-                <Button className={styles.button} onClick={handleClickPilot} />
-                <Button onClick={handleClickPolar} />
+                <Button className={styles.button} onClick={handleClickRadio} />
+                <Button className={styles.button} onClick={handleClickConnect} />
             </div>
             <BackButton className={styles.backButton} onClick={handleClickBack} />
         </div>

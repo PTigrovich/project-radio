@@ -13,7 +13,7 @@ function RadioPolar() {
             audioRef.current.pause();
             audioRef.current.currentTime = 0;
         }
-        navigate('/polar');
+        navigate('/radio_menu');
     };
 
     const handlePlay = () => {

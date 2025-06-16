@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
 import Main from './pages/Main/Main';
+
 import Home from './pages/Home/Home';
-import Home2 from './pages/Home2/Home2';
 import Arctic from './pages/Arctic/Arctic';
 import Pilot from './pages/Pilot/Pilot';
 import Polar from './pages/Polar/Polar';
@@ -14,6 +14,8 @@ import RadioPilot from './pages/Radio/RadioPilot/RadioPilot';
 import ConnectPilot from './pages/Connect/ConnectPilot/ConnectPilot';
 import RadioPolar from './pages/Radio/RadioPolar/RadioPolar';
 import ConnectPolar from './pages/Connect/ConnectPolar/ConnectPolar';
+import RadioMenu from './pages/Radio/RadioMenu/RadioMenu';
+import ConnectMenu from './pages/Connect/ConnectMenu/ConnectMenu';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -23,19 +25,15 @@ const router = createBrowserRouter([
     },
     {
         path: '/home',
-        element: <Home2 />,
+        element: <Home />,
     },
     {
-        path: '/arctic',
-        element: <Arctic />,
+        path: '/radio_menu',
+        element: <RadioMenu />,
     },
     {
-        path: '/pilot',
-        element: <Pilot />,
-    },
-    {
-        path: '/polar',
-        element: <Polar />,
+        path: '/connect_menu',
+        element: <ConnectMenu />,
     },
     {
         path: '/radio_arctic',
